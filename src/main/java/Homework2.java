@@ -1,25 +1,36 @@
-
+import java.util.*;
 
 public class Homework2
 {
     public static void main(String[] args)
     {
-        int i, j, z, Array[][];
+        int i, j, x, y, z, RandomX, RandomY, Array[][];
 
         Array= new int[5][5];
-
-        for (i=0;i<5;i++)
+        Random number= new Random();
+        RandomX=number.nextInt(5);
+        RandomY=number.nextInt(5);
+        //System.out.println(RandomX);
+        //System.out.println(RandomY);
+        for (x=0;x<5;x++)
         {
-            for(j=0;j<5;j++)
+            for(y=0;y<5;y++)
             {
-                Array[i][j]=1;
+                if (x==RandomX && y==RandomY)
+                {
+                    Array[x][y]=1;
+                }
+                else
+                {
+                    Array[x][y] = 0;
+                }
             }
         }
-        for (i=0;i<5;i++)
+        for (x=0;x<5;x++)
         {
-            for(j=0;j<5;j++)
+            for(y=0;y<5;y++)
             {
-                System.out.print(Array[i][j]);
+                System.out.print(Array[x][y]);
             }
             System.out.println();
         }
